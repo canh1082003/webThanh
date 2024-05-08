@@ -25,7 +25,7 @@ function ProductDetail() {
           </h1>
           <div className="flex justify-between">
             <p className="py-5 text-[24px] font-bold ">
-              price : {formatPrice(product?.price)}
+              price : {formatPrice(Number(product?.price))}
             </p>
           </div>
           <div className="w-full h-[1px] bg-white my-3"></div>

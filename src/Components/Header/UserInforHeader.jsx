@@ -12,7 +12,10 @@ function UserInforHeader() {
   return (
     <>
       {!user && (
-        <Link to={"/login"} className="flex gap-1 items-center hover:underline">
+        <Link
+          to={"/login"}
+          className="flex text-black gap-1 items-center hover:underline"
+        >
           <div className=" bg-mainColor-color_D9D9D9  p-2 rounded-full">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -20,7 +23,7 @@ function UserInforHeader() {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-5 h-5 fill-mainColor-color_2D0000"
+              className="w-5 h-5 fill-mainColor-color_2D0000 stroke-white"
             >
               <path
                 strokeLinecap="round"
@@ -29,7 +32,7 @@ function UserInforHeader() {
               />
             </svg>
           </div>
-          <span className="font-bold ">Login</span>
+          <span className="font-bold text-white">Login</span>
         </Link>
       )}
       {user && (
@@ -53,19 +56,19 @@ function UserInforHeader() {
               />
             </svg>
           </div>
-          <span className="font-bold  ">{user.lastName}</span>
+          <span className="font-bold  ">{`${user.firstName} ${user.lastName}`}</span>
 
           {showPopover && (
             <div className="bg-gray-100 absolute top-12 w-48 ">
               <Link to={"profile"}>
                 <div className="py-3 px-1 border-b text-black hover:bg-gray-200">
-                  Personal Information
+                  Thông Tin Người Dùng
                 </div>
               </Link>
               {user && user.role === "admin" && (
                 <div className="py-3 px-1 border-b text-black hover:bg-gray-200">
                   <Link to={"/admin"} className="font-bold">
-                    Manage Products
+                    Danh sách sản phẩm
                   </Link>
                 </div>
               )}
@@ -74,7 +77,7 @@ function UserInforHeader() {
                 className="px-1 py-3 border-b text-black hover:bg-gray-200"
                 onClick={handleLogout}
               >
-                <Link to={"/login"}>Logout</Link>
+                <Link to={"/login"}>Đăng Xuất</Link>
               </div>
             </div>
           )}

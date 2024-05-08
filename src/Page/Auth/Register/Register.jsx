@@ -3,7 +3,7 @@ import Input from "../../../Components/Input";
 import { useForm } from "react-hook-form";
 import { useMutation } from "@tanstack/react-query";
 import { getRule } from "../../../util/rule";
-import Image from "../../../assets/Luffy.png";
+import main from "../../../assets/main2.avif";
 import { registerAccount } from "../../../Api/Api.auth";
 import { useState } from "react";
 
@@ -32,7 +32,10 @@ function Register() {
   });
   return (
     <div className="grid grid-cols-2">
-      <div className="lg:col-span-1 col-span-2 w-full mb-10">
+      <div className="col-span-1 hidden lg:block">
+        <img src={main} alt="" className="w-[100%] pt-10 h-[600px] " />
+      </div>
+      <div className="lg:col-span-1 col-span-2 w-full mb-10 ">
         <form
           className="mx-32 pt-10 text-mainColor-color_D9D9D9"
           onSubmit={onSubmit}
@@ -110,9 +113,6 @@ function Register() {
             register
           </button>
         </form>
-      </div>
-      <div className="col-span-1 hidden lg:block">
-        <img src={Image} alt="" className="w-[100%] pt-20" />
       </div>
     </div>
   );

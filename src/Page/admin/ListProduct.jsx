@@ -224,7 +224,7 @@ export default function ListProduct() {
                   <input
                     type="text"
                     name="price"
-                    value={formDataUpdate.price}
+                    value={Number(formDataUpdate.price)}
                     onChange={handleChange}
                     className="w-[700px] border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:border-blue-500"
                   />
@@ -273,7 +273,7 @@ export default function ListProduct() {
             </div>
             <p className="flex-1 text-center my-auto">{product?.name}</p>
             <p className="flex-1 text-center my-auto">
-              {formatPrice(product?.price)}
+              {formatPrice(Number(product?.price))}
             </p>
             <p className="flex-1 text-center my-auto">{product?.categoryId}</p>
             <div className="flex-1 text-center my-auto">
