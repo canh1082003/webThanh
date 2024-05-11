@@ -10,10 +10,13 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #4c412c;
+  background-color: #659bbe;
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
   color: white;
+}
+.bg_product_rgba {
+  background-image: linear-gradient(to bottom, #2f4858, #659bbe);
 }

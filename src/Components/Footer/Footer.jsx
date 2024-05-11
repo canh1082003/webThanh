@@ -7,26 +7,26 @@ function Footer() {
     <div className="bg-white">
       <div className="container">
         <div className="grid grid-cols-12 mx-10 py-10 gap-7">
-          <div className="col-span-4 text-black">
-            <h1 className="font-bold text-lg pb-3">Liên Hệ Chúng Tôi</h1>
-            <p>Huỳnh Quốc Duy</p>
-          </div>
-
-          <div className="col-span-3">
-            <h1 className="font-bold text-lg pb-3">Learn More</h1>
+          <div className="col-span-3 text-black">
+            <h1 className="font-bold text-lg pb-3">Tìm Hiểu Thêm</h1>
             <ul>
-              <li>About</li>
-              <li>Products</li>
-              <li>Some achievements of the farm</li>
+              <li>Giới Thiệu</li>
+              <li>Sản Phẩm</li>
             </ul>
           </div>
-          <div className="col-span-2">
-            <h1 className="font-bold text-lg pb-3">Follow Us</h1>
-            <div className="flex gap-3">
-              <Link to="https://web.facebook.com/huynh.q.duy.716">
+          <div className="col-span-4 text-black">
+            <li>
+              Trà sữa, một thức uống phổ biến từ các quán street food đến nhà
+              hàng sang trọng, là sự kết hợp tinh tế giữa trà thơm và sữa béo
+              ngậy. Hòa quyện vị ngọt của sữa và vị đắng nhẹ của trà, trà sữa
+              mang lại cảm giác thư giãn và phấn khích đồng thời.
+            </li>
+          </div>
+          <div className="col-span-5">
+            <div className="flex ml-[300px]">
+              <Link to="https://www.facebook.com/pvt17082003">
                 <img src={Face} alt="" width={40} />
               </Link>
-              <img src={Instagram} alt="" width={40} />
             </div>
           </div>
         </div>

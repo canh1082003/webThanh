@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Input from "../../../Components/Input";
 import { useForm } from "react-hook-form";
 import { getRule } from "../../../util/rule";
-import main from "../../../assets/main2.avif";
+import main from "../../../assets/main1.jpg";
 
 import { useMutation } from "@tanstack/react-query";
 import { LoginAccount } from "../../../Api/Api.auth";
@@ -42,15 +42,15 @@ function Login() {
         >
           <div className=" w-full relative flex justify-between items-center  ">
             <span className="text-3xl font-text  font-semibold capitalize ">
-              Login
+              Đăng Nhập
             </span>
             <p className="mt-2">
-              Do not have an account?
+              Bạn Chưa Có Tài Khoản?
               <Link
                 to={"/register"}
                 className=" pl-1 text-red-500 cursor-pointer  hover:opacity-50"
               >
-                Register
+                Đăng Kí
               </Link>
             </p>
           </div>
@@ -68,7 +68,7 @@ function Login() {
               <Input
                 name="password"
                 type={showPassword ? "text" : "password"}
-                placeholder="password"
+                placeholder="Mật Khẩu"
                 autoComplete="on"
                 rules={rule.password}
                 register={register}
@@ -76,7 +76,7 @@ function Login() {
               />
               <div className="flex items-center gap-2 mb-3">
                 <input type="checkbox" className="w-4 h-4" onClick={eye} />
-                Show password
+                Hiển Thị Mật Khẩu
               </div>
             </div>
           </div>
@@ -85,7 +85,7 @@ function Login() {
             type="submit"
             className="w-full border py-3 my-2 hover:text-mainColor-color_hover hover:bg-mainColor-color_hover_text hover:border-mainColor-color_hover uppercase"
           >
-            login
+            Đăng Nhập
           </button>
         </form>
       </div>

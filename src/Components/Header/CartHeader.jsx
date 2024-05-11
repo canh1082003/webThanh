@@ -23,16 +23,18 @@ function CartHeader() {
       >
         <ShoppingCartIcon className="w-5 h-5 stroke-black " />
 
-        <div className="   rounded-full px-2  bg-white text-black absolute top-[-10px] ml-2">
+        <div className="   rounded-full px-2  bg-black text-white absolute top-[-10px] ml-2">
           {totalUniqueItems}
         </div>
       </div>
       {showPopover && (
-        <div className="absolute  grid grid-cols-3  top-0 right-0 w-screen h-screen">
+        <div className="absolute  grid grid-cols-3 z-50 top-0 right-0 w-screen h-screen">
           <div className="col-span-2 bg-black  bg-opacity-80"></div>
-          <div className="col-span-1 py-7 px-5 bg-white text-black">
+          <div className="col-span-1 py-7 px-5 bg-cyan-700 text-white">
             <div className=" flex justify-between  ">
-              <div className=" mb-5 font-bold text-2xl text-black ">Cart</div>
+              <div className=" mb-5 font-bold text-2xl text-white ">
+                Giỏ Hàng
+              </div>
 
               <div onClick={() => SetShowPopover(false)}>
                 <svg
@@ -74,18 +76,16 @@ function CartHeader() {
                 </td>
                 <td className="  flex  px-5 py-6">
                   <button
-                    className="text-md border border-black hover:bg-mainColor-color_hover py-[1px] px-1"
+                    className="text-md  hover:bg-mainColor-color_hover py-[1px] px-1"
                     onClick={() =>
                       updateItemQuantity(item.id, item.quantity - 1)
                     }
                   >
                     -
                   </button>
-                  <div className="text-md border-t border-b  border-black py-[1px] px-1 ">
-                    {item.quantity}
-                  </div>
+                  <div className="text-md py-[1px] px-1 ">{item.quantity}</div>
                   <button
-                    className="text-md border border-black hover:bg-mainColor-color_hover py-[1px] px-1"
+                    className="text-md  hover:bg-mainColor-color_hover py-[1px] px-1"
                     onClick={() =>
                       updateItemQuantity(item.id, item.quantity + 1)
                     }
@@ -119,7 +119,7 @@ function CartHeader() {
                 </div>
                 <Link
                   to={"/pay"}
-                  className=" px-3 py-4 text-center bg-black text-white hover:bg-mainColor-color_hover hover:text-mainColor-color_hover_text cursor-pointer"
+                  className=" px-3 py-4 text-center bg-white text-black hover:bg-mainColor-color_hover hover:text-mainColor-color_hover_text cursor-pointer"
                 >
                   Shop now
                 </Link>

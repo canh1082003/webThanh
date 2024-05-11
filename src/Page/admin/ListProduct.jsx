@@ -18,6 +18,7 @@ export default function ListProduct() {
     name: "",
     price: "",
     categoryId: "",
+    description: "",
   });
   const [selectedProduct, setSelectedProduct] = useState(null);
 
@@ -174,6 +175,7 @@ export default function ListProduct() {
       name: product.name,
       price: String(product.price),
       categoryId: String(product.categoryId),
+      description: String(product.description),
     });
     setSelectedProduct(product);
   };
@@ -208,7 +210,7 @@ export default function ListProduct() {
                 encType="multipart/form-data"
               >
                 <h3 className="font-bold text-2xl text-center mb-2 uppercase">
-                  Update User
+                  Update Product
                 </h3>
 
                 <div>
@@ -236,7 +238,16 @@ export default function ListProduct() {
                     onChange={handleChange}
                     className="w-[700px] border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:border-blue-500"
                   />
+                  <p className="font-bold">Description</p>
+                  <input
+                    type="text"
+                    name="description"
+                    value={formDataUpdate.description}
+                    onChange={handleChange}
+                    className="w-[700px] border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:border-blue-500"
+                  />
                 </div>
+
                 <div className="flex justify-center items-center">
                   <button
                     type="submit"

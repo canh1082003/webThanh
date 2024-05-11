@@ -2,15 +2,13 @@ import { useState } from "react";
 import { useUserInfo } from "../../hook/useUserInfo";
 import { useMutation } from "@tanstack/react-query";
 import { UpdateAccountUser } from "../../Api/Api.auth";
-import logo123123 from "../../assets/Luffy.png";
-import Image from "../../assets/imageMain.png";
+import main from "../../assets/main.jpg";
+
 function UserInfor() {
   const userInfor = useUserInfo();
   const isVerifyEmailColor = userInfor.isVerifyEmail === "1" ? "green" : "";
   const [isUpdateProfile, setIsUpdateProfile] = useState(false);
-  // const [name, setUserName] = useState(
-  //   `${userInfor.firstName} ${userInfor.lastName}`
-  // );
+
   const [firstName, setUserfirstName] = useState(`${userInfor.firstName}`);
   const [lastName, setUserLastName] = useState(`${userInfor.lastName}`);
   const [email, setUserEmail] = useState(`${userInfor.email}`);
@@ -40,10 +38,15 @@ function UserInfor() {
   return (
     <div>
       <div
-        className="max-w-screen-xl bg-black mx-auto my-7 mt-[150px] lg:px-20 rounded-xl"
+        className="max-w-screen-xl bg-[#294659]  mx-auto my-7 mt-[150px] lg:px-20 rounded-xl"
         id="contact"
       >
-        <div className="w-full p-8 my-4 mr-auto shadow-2xl md:px-12 lg:w-9/12 lg:pl-20 lg:pr-40 rounded-2xl">
+        <img
+          src={main}
+          alt=""
+          className="w-[200px] h-[156px] rounded-full  m-auto"
+        />
+        <div className="w-full p-8 my-4 mx-auto shadow-2xl md:px-12 lg:w-9/12 lg:pl-20 lg:pr-40 rounded-2xl">
           <div className="flex">
             <h1 className="text-5xl text-white font-bold ">
               Thông Tin Cá Nhân

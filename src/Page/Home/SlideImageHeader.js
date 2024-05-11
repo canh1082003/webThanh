@@ -1,6 +1,6 @@
-import slide1 from "../../assets/main1.png";
-import slide2 from "../../assets/slide2.png";
-import slide3 from "../../assets/slide3.png";
+import slide1 from "../../assets/main1.jpg";
+import slide2 from "../../assets/main2.jpg";
+import slide3 from "../../assets/main3.jpg";
 export const SlidesImage = [
   {
     url: slide1,

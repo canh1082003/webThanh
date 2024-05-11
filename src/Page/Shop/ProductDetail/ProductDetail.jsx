@@ -18,8 +18,13 @@ function ProductDetail() {
 
   return (
     <div className="pt-[60px] ">
-      <div className="grid grid-cols-2 mx-20 gap-10" key={product?.id}>
+      <h1 className="mx-20 text-4xl mb-10">Chi Tiết Sản Phẩm</h1>
+      <div className="flex  mx-[200px] gap-10" key={product?.id}>
+        <div className="col-span-1 mb-10">
+          <img src={product?.imgUrl} alt="" className="h-[500px] w-[2000px]" />
+        </div>
         <div className="col-span-1">
+          <h3>Trà Sữa Bông</h3>
           <h1 className="text-[30px] pb-3 font-bold  capitalize">
             {product?.name}
           </h1>
@@ -28,28 +33,17 @@ function ProductDetail() {
               price : {formatPrice(Number(product?.price))}
             </p>
           </div>
-          <div className="w-full h-[1px] bg-white my-3"></div>
           <div className="py-5 text-[24px] font-bold ">Description</div>
           <p className="pb-2 text-[18px]  ">{product?.description}</p>
-          <div className="w-full h-[1px] bg-white my-5"></div>
-          <div className="grid grid-cols-4 gap-1 py-5">
+
+          <div className="">
             <button
               className=" col-span-2 border w-full px-5 py-4 hover:bg-mainColor-color_hover hover:text-mainColor-color_hover_text hover:border-mainColor-color_hover  "
               onClick={() => addItem(product)}
             >
               Add to cart
             </button>
-            <Link
-              to={"/pay"}
-              onClick={() => addItem(product)}
-              className="col-span-2 border w-full text-center px-5 py-4  hover:bg-mainColor-color_hover hover:text-mainColor-color_hover_text hover:border-mainColor-color_hover "
-            >
-              Buy now
-            </Link>
           </div>
-        </div>
-        <div className="col-span-1 mb-10">
-          <img src={product?.imgUrl} alt="" />
         </div>
       </div>
     </div>

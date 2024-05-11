@@ -3,7 +3,8 @@ import Input from "../../../Components/Input";
 import { useForm } from "react-hook-form";
 import { useMutation } from "@tanstack/react-query";
 import { getRule } from "../../../util/rule";
-import main from "../../../assets/main2.avif";
+import main from "../../../assets/main1.jpg";
+
 import { registerAccount } from "../../../Api/Api.auth";
 import { useState } from "react";
 
@@ -43,15 +44,15 @@ function Register() {
         >
           <div className=" w-full relative flex justify-between items-center  ">
             <span className="text-3xl font-text  font-semibold capitalize ">
-              Register
+              Đăng Ký
             </span>
             <p className="mt-2">
-              Do you already have an account?
+              Bạn Đã Có Tài Khoản?
               <Link
                 to={"/login"}
                 className=" pl-1 text-red-500 cursor-pointer  hover:opacity-50"
               >
-                Log in
+                Đăng Nhập
               </Link>
             </p>
           </div>
@@ -85,7 +86,7 @@ function Register() {
             <Input
               name="password"
               type={showPassword ? "text" : "password"}
-              placeholder="Password"
+              placeholder="Mật Khẩu"
               autoComplete="on"
               rules={rule.password}
               register={register}
@@ -96,7 +97,7 @@ function Register() {
               <Input
                 name="confirmPassword"
                 type={showPassword ? "text" : "password"}
-                placeholder="confirm password"
+                placeholder="Xác Nhận Mật Khẩu"
                 autoComplete="on"
                 rules={rule.confirmPassword}
                 register={register}
@@ -104,13 +105,13 @@ function Register() {
               />
               <div className="flex items-center gap-2 mb-3">
                 <input type="checkbox" className="w-4 h-4" onClick={eye} />
-                Show password
+                Hiển Thị Mật Khẩu
               </div>
             </div>
           </div>
 
           <button className="w-full border py-3 my-2 hover:text-mainColor-color_hover hover:bg-mainColor-color_hover_text hover:border-mainColor-color_hover uppercase">
-            register
+            Đăng Ký
           </button>
         </form>
       </div>
